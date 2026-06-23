@@ -42,9 +42,9 @@ export default function Home() {
               alt="Himalayan Mountain Peaks"
               width={1920}
               height={1080}
-              className="w-full h-full object-cover opacity-30 scale-105 transform hover:scale-100 transition-transform duration-[10000ms]"
+              className="w-full h-full object-cover opacity-60 scale-105 transform hover:scale-100 transition-transform duration-[10000ms]"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/75 to-[#090a0f]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/40 to-slate-950/80" />
           </div>
 
           <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8 pt-10">
