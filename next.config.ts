@@ -1,20 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Required for Netlify deployment with @netlify/plugin-nextjs
-  // Do NOT use output: 'export' — we have API routes which need server-side rendering
+  // IMPORTANT: Do NOT set output: 'export' — this project has API routes
+  // which require server-side rendering. Netlify handles this via
+  // @netlify/plugin-nextjs (Edge Functions).
   images: {
-    // Allow images from the live site (used in some trek detail pages)
     remotePatterns: [
       {
         protocol: "https",
         hostname: "himalayanwarrior.com",
       },
     ],
-    // Netlify supports Next.js Image Optimization via the plugin
-    unoptimized: false,
   },
-  // Ensure trailing slashes are consistent for Netlify routing
+  // Consistent URLs — no trailing slashes (e.g., /treks not /treks/)
   trailingSlash: false,
 };
 

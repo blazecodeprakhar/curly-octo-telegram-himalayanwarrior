@@ -6,11 +6,7 @@
   NODE_VERSION = "20"
   NEXT_TELEMETRY_DISABLED = "1"
 
+# @netlify/plugin-nextjs v5+ handles ALL routing automatically.
+# Do NOT add manual [[redirects]] here — it will break the plugin's routing.
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-# Redirect all routes to Next.js for client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/___netlify-handler"
-  status = 200

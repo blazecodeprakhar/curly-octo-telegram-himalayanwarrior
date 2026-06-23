@@ -1,3 +1,8 @@
-# Netlify _redirects file
-# Route all requests through Next.js (handled by @netlify/plugin-nextjs)
-/* /.netlify/functions/___netlify-handler 200
+# Netlify _redirects — for Himalayan Warrior (Next.js via @netlify/plugin-nextjs)
+#
+# NOTE: @netlify/plugin-nextjs v5+ manages ALL routing via Netlify Edge Functions.
+# This file is a safety-net fallback ONLY.
+# The plugin generates its own routing rules during the build automatically.
+#
+# If for any reason a route is not caught by the plugin, send it to the 404 page:
+/404  /404.html  404
